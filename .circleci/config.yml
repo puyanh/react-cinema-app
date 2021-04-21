@@ -51,7 +51,7 @@ jobs:
       - *restore-cache
       - *install-dependencies
       - *save-cache
-      
+
   linting:
     executor: app-executor
     steps:
@@ -118,7 +118,7 @@ workflows:
                 - master
       - deploy-to-aws-s3:
           requires:
-            - build
+            - linting
           filters:
             branches:
               only:
