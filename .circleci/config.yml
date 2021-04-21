@@ -51,6 +51,7 @@ jobs:
       - *restore-cache
       - *install-dependencies
       - *save-cache
+      
   linting:
     executor: app-executor
     steps:
