@@ -4,7 +4,7 @@ version: 2.1
 executors:
   app-executor:
     docker:
-      - image: circleci/node:15.5.0
+      - image: circleci/node:14.16.1
     working_directory: ~/repo
   slack-executor:
     docker:
@@ -149,7 +149,7 @@ jobs:
               aws --region ${AWS_REGION} s3 sync ~/repo/build s3://${AWS_BUCKET_NAME} --delete
             elif [ "${CIRCLE_BRANCH}" == "staging" ]
             then
-              aws --region ${AWS_REGION} s3 sync ~/repo/build s3://${AWS_BUCKET_NAME} --delete          
+              aws --region ${AWS_REGION} s3 sync ~/repo/build s3://${AWS_BUCKET_NAME} --delete
             else
               aws --region ${AWS_REGION} s3 sync ~/repo/build s3://${AWS_BUCKET_NAME} --delete
             fi
