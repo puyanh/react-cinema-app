@@ -141,6 +141,7 @@ workflows:
                 - develop
                 - staging
                 - master
+                - feature/setup-redux
       - prettier:
           requires:
             - build
@@ -150,6 +151,8 @@ workflows:
                 - develop
                 - staging
                 - master
+                - feature/setup-redux
+
       - deploy-to-aws-s3:
           requires:
             - prettier
@@ -159,6 +162,7 @@ workflows:
                 - develop
                 - staging
                 - master
+                - feature/setup-redux
       - deploy-to-aws-cloudfront:
           requires:
             - deploy-to-aws-s3
@@ -168,6 +172,7 @@ workflows:
                 - develop
                 - staging
                 - master
+                - feature/setup-redux
       - notify-via-slack:
           requires:
             - deploy-to-aws-cloudfront
@@ -177,3 +182,4 @@ workflows:
                 - develop
                 - staging
                 - master
+                - feature/setup-redux
