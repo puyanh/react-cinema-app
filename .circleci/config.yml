@@ -1,5 +1,5 @@
 orbs:
-  slack: circleci/slack@4.2.0
+  slack: circleci/slack@3.4.2
 version: 2.1
 executors:
   app-executor:
@@ -118,7 +118,7 @@ jobs:
             else
               aws cloudfront create-invalidation --distribution-id ${DEV_DISTRIBUTION_ID} --paths /\*
             fi
-            
+
   notify-via-slack:
     executor: slack-executor
     steps:
