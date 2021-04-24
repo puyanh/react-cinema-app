@@ -107,13 +107,11 @@ Header.propTypes = {
   searchQuery: PropTypes.func,
   searchResult: PropTypes.func,
   setResponsePageNumber: PropTypes.func,
-  // list: PropTypes.array,
   page: PropTypes.number,
   totalPages: PropTypes.number
 };
 
 const mapStateToProps = (state) => ({
-  // list: state.movies.list,
   page: state.movies.page,
   totalPages: state.movies.totalPages
 });
