@@ -38,7 +38,7 @@ const Header = (props) => {
   const { getMovies, setMovieType, page, totalPages, setResponsePageNumber, searchQuery, searchResult } = props;
   let [navClass, setNavClass] = useState(false);
   let [menuClass, setMenuClass] = useState(false);
-  const [type, setType] = useState('now_playing');
+  const [type, setType] = useState('top_rated');
   const [search, setSearch] = useState('');
 
   const history = useHistory();
